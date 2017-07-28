@@ -20,7 +20,7 @@ gulp.task('styles', function(){
 gulp.task('views', function buildHTML() {
   return gulp.src('src/views/*.pug')
   .pipe(pug())
-	.pipe(gulp.dest('dest/'))
+	.pipe(gulp.dest('./'))
 	.pipe(livereload());
 });
 
@@ -51,7 +51,7 @@ gulp.task('watch', function(){
 gulp.task('connect', function(){
 	console.log('check port :4200 bro');
 	connect.server({
-		root: './dest',
+		root: './',
 		port: 4200
 	});
 });
