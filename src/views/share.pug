@@ -1,0 +1,66 @@
+doctype html
+
+- var title = "Welcome back!"
+- var subtitle = "Dok-7 Influencer #013"
+- var protoNumber = 3
+- var protoName = "Share"
+- var nextLink = "claim.html"
+- var prevLink = "application_submitted.html"
+
+html(lang="en")
+  head
+    title= pageTitle
+    link(
+      href='/styles/style.css'
+      rel='stylesheet'
+      type='text/css'
+    )
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+      )  
+  body
+    include components/prototype.pug
+    div(class="c-hero") 
+      include components/header.pug
+      div(class="container-xl")      
+        div(class="c-hero-content")
+          p(class="t-sm-on-md") #{subtitle}
+          h1(class="t-md t-xl-on-md") #{title}
+          p(class="t-xxs t-sm-on-md") Grab your unique discount link below and begin sharing 
+          div(class="d-b")
+            a(href="#balance" class="btn-sm btn-lg-on-md btn-primary-light m-r-sm") Check your balance
+            a(href="#tips" class="btn-sm btn-lg-on-md btn-primary-light m-l-sm") Tips on sharing
+    
+    div(class="c-chip-container")
+      div(class="container")
+        div(class="c-chip")
+          h2(class="t-sm t-md-on-md") Your unique link
+          p(class="t-xxs t-xs-on-md") (click to copy)
+          a(class="c-sharing-box b-c-d c-w p-md" href="#" id="referral-url") https://vip.dok-7.com/f?=12345
+    
+    div(class="b-c-w" id="balance") 
+      div(class="container-xs p-t-md p-b-xl")
+        h1(class="t-sm t-md-on-md ta-c") Your influencer balance
+        p(class="t-sm ta-c") (click to claim)
+        a(href="#")
+          div(class="c-inf-balance-container")
+            div(class="c-inf-sales t-xs t-sm-on-md") Sales: 04
+            div(class="c-inf-balance t-xs t-sm-on-md") Balance: £20
+        p(class="t-xxs t-xs-on-md") All submitted claims are processed within 30 days
+        div(class="d-b m-v-md m-b-lg-on-md ta-c")
+          a(href="#" class="t-sm") Questions? Check our FAQ
+  
+    div(class="b-c-d c-w" id="tips")  
+      div(class="container-sm p-v-xl ta-c")
+        h1 Tips for sharing
+        p Once accepted, we’ll add you to our Payroll, where each sale you generate is tracked. 
+        p When you claim your rewards, we’ll pay you what you’ve claimed within 30 days.
+        div(class="d-b m-t-lg")
+        a(href="#" class="btn-lg btn-standout c-modal-trigger") APPLY NOW
+        
+    include components/modal.pug 
+    script(
+      src='/scripts/main.js'   
+    )
+    

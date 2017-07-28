@@ -1,0 +1,37 @@
+doctype html
+
+- var title = "We'll be in touch"
+- var subtitle = "Thanks for signing up"
+- var protoNumber = 2
+- var protoName = "Application submitted"
+- var nextLink = "share.html"
+- var prevLink = "index.html"
+
+html(lang="en")
+  head
+    title= pageTitle
+    link(
+      href='/styles/style.css'
+      rel='stylesheet'
+      type='text/css'
+    )
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+      )  
+  body(class="b-c-d")
+    include components/prototype.pug
+    div(class="c-hero") 
+      include components/header.pug
+      div(class="container-xl")      
+        div(class="c-hero-content")
+          p(class="f-s t-s-on-md") #{subtitle}
+          h1(class="t-m t-xl-on-md") #{title}
+          div(class="d-b")
+            a(href="#" class="btn-lg btn-primary-light m-r-sm") Dok-7.com
+        
+    include components/modal.pug 
+    script(
+      src='/scripts/main.js'   
+    )
+    

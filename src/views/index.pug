@@ -1,0 +1,72 @@
+doctype html
+
+- var title = "You could be a Dok-7 influencer"
+- var subtitle = "Are you a big deal on the Gram?"
+- var protoNumber = 1
+- var protoName = "Register"
+- var nextLink = "application_submitted.html"
+- var prevLink = "#"
+
+html(lang="en")
+  head
+    title= pageTitle
+    link(
+      href='/styles/style.css'
+      rel='stylesheet'
+      type='text/css'
+    )
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+      )  
+  body
+    include components/prototype.pug
+    div(class="c-hero") 
+      include components/header.pug
+      div(class="container-xl")      
+        div(class="c-hero-content")
+          p(class="f-s t-s-on-md") #{subtitle}
+          h1(class="t-m t-xl-on-md") #{title}
+          div(class="d-b")
+            a(href="#" class="btn btn-primary-light m-r-sm") More info
+            a(href="#" class="btn btn-standout c-modal-trigger m-l-sm") APPLY NOW
+    
+    div(class="c-chip-container")
+      div(class="container")
+        div(class="c-chip")
+          h2(class="t-sm t-md-on-md") Give back to your followers
+          p(class="t-xxs t-xs-on-md") Sign up to get access to your discount link, then share with your followers to save them money and earn you £5 per first purchase
+    
+    div(class="b-c-w")
+      div(class="container" id="hiw")
+        h1(class="t-md ta-c") How It Works
+        div(class="c-hiw-container")
+          div(class="c-hiw-img")
+            img(src="/assets/hiw1.jpg")
+          div(class="c-hiw-txt")
+            p(class="t-xxs t-sm-on-md") Share your link with your followers (we have tips to help you do this)
+        div(class="c-hiw-container")
+          div(class="c-hiw-txt")
+            p(class="t-xxs t-sm-on-md") Get £5 for every person who buys with your link
+          div(class="c-hiw-img")
+            img(src="/assets/hiw2.jpg")
+        div(class="c-hiw-container")
+          div(class="c-hiw-img")
+            img(src="/assets/hiw3.jpg")
+          div(class="c-hiw-txt")
+            p(class="t-xxs t-sm-on-md") Claim your reward and start spending!
+
+  
+    div(class="b-c-d c-w")  
+      div(class="container-sm p-v-xl ta-c")
+        h1 Join Our Payroll
+        p Once accepted, we’ll add you to our Payroll, where each sale you generate is tracked. 
+        p When you claim your rewards, we’ll pay you what you’ve claimed within 30 days.
+        div(class="d-b m-t-lg")
+        a(href="#" class="btn-lg btn-standout c-modal-trigger") APPLY NOW
+        
+    include components/modal.pug 
+    script(
+      src='/scripts/main.js'   
+    )
+    

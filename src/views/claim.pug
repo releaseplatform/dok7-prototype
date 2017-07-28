@@ -1,0 +1,60 @@
+doctype html
+
+- var title = "Welcome to Dok-7"
+- var subtitle = "Your 20% discount from @namescodes"
+- var protoNumber = 4
+- var protoName = "Claim"
+- var nextLink = ""
+- var prevLink = "share.html"
+
+html(lang="en")
+  head
+    title= pageTitle
+    link(
+      href='/styles/style.css'
+      rel='stylesheet'
+      type='text/css'
+    )
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+      )  
+  body
+    include components/prototype.pug
+    div(class="c-hero" id="top") 
+      include components/header.pug
+      div(class="container-xl")      
+        div(class="c-hero-content")
+          p(class="t-sm-on-md") #{subtitle}
+          h1(class="t-md t-xl-on-md m-b-md") #{title}
+          div(class="d-b")
+            a(href="#what" class="btn-sm btn-lg-on-md btn-primary-light m-r-sm") What is Dok-7?
+            a(href="#collections" class="btn-sm btn-lg-on-md btn-primary-light m-l-sm") Our Collections
+    
+    div(class="c-chip-container")
+      div(class="container")
+        div(class="c-chip")
+          p(class="t-xxs t-sm-on-md f-s m-b-xs") Where should we send your discount?
+          form(class="c-form")
+            div(class="c-field-container m-b-md")
+              label(class="c-label d-n" for="name") Instagram Handle
+              input(class="c-field" id="name" placeholder="Instagram Handle")
+            div(class="c-field-container m-b-md")
+              label(class="c-label d-n" for="email") Paypal Email
+              input(class="c-field" id="email" placeholder="Paypal Email")
+            button(class="btn-lg btn-primary") SUBMIT  
+                
+    div(class="b-c-w" id="what")
+      div(class="container-sm p-b-xl ta-c")
+        h1(class="t-sm t-md-on-md") Give back to your followers
+        p(class="t-xxs t-xs-on-md") Sign up to get access to your discount link, then share with your followers to save them money and earn you £5 per first purchase
+        
+      div(class="container-sm p-b-xl ta-c" id="collections")
+        h1(class="t-sm t-md-on-md") Our Collections
+        p(class="t-xxs t-xs-on-md") (click to view on Dok-7.com)
+        div(class="c-collections-view")
+          
+    script(
+      src='/scripts/main.js'   
+    )
+    
